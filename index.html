@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./src/index.js" defer></script>
+  </head>
+  <body class="text-gray-700">
+    <main class="bg-gray-200 flex items-center justify-center min-h-screen">
+      <article
+        class="container w-10/12 max-w-[400px] lg:max-w-[600px] lg:flex rounded-lg bg-white"
+      >
+        <div class="lg:w-5/12 max-h-[270px] overflow-hidden">
+          <img
+            src="./images/drawers.jpg"
+            alt="bed side drawer"
+            class="rounded-t-lg lg:rounded-l-lg lg:rounded-r-none lg:object-cover lg:h-full"
+          />
+        </div>
+        <div class="lg:w-7/12">
+          <div class="px-10 py-5 mt-6">
+            <h1 class="text-gray-900 font-bold text-xl mb-3">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </div>
+          <div
+            id="normal-state"
+            class="flex items-center px-10 py-4 rounded-b-lg"
+          >
+            <img
+              src="./images/avatar-michelle.jpg"
+              alt="avatar photo"
+              width="35"
+              class="rounded-full mr-5"
+            />
+            <div>
+              <h2 class="font-bold text-gray-900">Michelle Appleton</h2>
+              <p class="text-gray-400">28 Jun 2020</p>
+            </div>
+            <div class="relative ml-auto">
+              <button
+                title="share"
+                type="button"
+                class="shrink-0 ml-auto bg-gray-200 rounded-full w-9 h-9 flex items-center justify-center hover:opacity-90 transition"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    fill="currentColor"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
+              </button>
+              <div
+                id="tooltip"
+                class="hidden flex bg-gray-900 py-5 px-10 items-center gap-5 rounded-xl w-max absolute -top-24 -translate-x-1/2"
+              >
+                <span class="text-gray-400 uppercase tracking-[5px]"
+                  >share</span
+                >
+                <a href="#" class="hover:opacity-90"
+                  ><img src="./images/icon-facebook.svg" alt="facebook icon"
+                /></a>
+                <a href="#" class="hover:opacity-90"
+                  ><img src="./images/icon-twitter.svg" alt="twitter icon"
+                /></a>
+                <a href="#" class="hover:opacity-90"
+                  ><img src="./images/icon-pinterest.svg" alt="pinterset icon"
+                /></a>
+                <div
+                  class="w-0 h-0 absolute border-[15px] border-t-gray-900 border-t-solid border-b-transparent border-l-transparent border-r-transparent -bottom-[27px] left-1/2"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="active-state"
+            class="hidden flex bg-gray-900 py-5 px-10 items-center gap-5 rounded-b-lg"
+          >
+            <span class="text-gray-400 uppercase tracking-[5px]">share</span>
+            <a href="#" class="hover:opacity-90"
+              ><img src="./images/icon-facebook.svg" alt="facebook icon"
+            /></a>
+            <a href="#" class="hover:opacity-90"
+              ><img src="./images/icon-twitter.svg" alt="twitter icon"
+            /></a>
+            <a href="#" class="hover:opacity-90"
+              ><img src="./images/icon-pinterest.svg" alt="pinterset icon"
+            /></a>
+            <button
+              title="share"
+              type="button"
+              class="ml-auto bg-gray-700 rounded-full w-9 h-9 flex items-center justify-center text-white hover:opacity-90 transition"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  fill="currentColor"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
